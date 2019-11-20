@@ -7,7 +7,7 @@ import cucumber.api.java.en.When;
 import static org.junit.Assert.assertEquals;
 
 public class StepDefinitions {
-    Calculadora calculadora;
+    private Calculadora calculadora;
     int c=0;
     @Given("^Tengo una clase llamada Calculadora$")
     public void tengo_una_clase_llamada_Calculadora() throws Throwable {
@@ -23,5 +23,10 @@ public class StepDefinitions {
     @Then("^debería devolver (\\d+)$")
     public void deberiaDevolver(int c) {
         assertEquals(this.c, c);
+    }
+
+    @When("^ejecuto el método resta con los parametros (\\d+) y (\\d+)$")
+    public void ejecutoElMetodoRestaConLosParametrosY(int a, int b) {
+        this.c=a-b;
     }
 }

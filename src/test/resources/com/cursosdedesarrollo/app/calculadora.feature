@@ -1,3 +1,5 @@
+# Tag calculadora, para solo ejecutar los tag que tu quieras
+@calculadora
 Feature: Calculadora
   Pruebas de calculadora simple
   Scenario: suma simple

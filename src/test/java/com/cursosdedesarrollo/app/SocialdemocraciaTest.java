@@ -6,6 +6,8 @@ import org.junit.After;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -40,10 +42,10 @@ public class SocialdemocraciaTest {
     driver.manage().window().setSize(new Dimension(1850, 1053));
     driver.findElement(By.id("searchInput")).click();
     driver.findElement(By.id("searchInput")).sendKeys("socialdemocracia");
-    driver.findElement(By.cssSelector(".suggestions-result-current > .highlight")).click();
-    driver.findElement(By.cssSelector(".tocsection-5 .toctext")).click();
-    driver.findElement(By.cssSelector("p:nth-child(42) > a")).click();
-    driver.findElement(By.id("firstHeading")).click();
-    assertThat(driver.findElement(By.id("firstHeading")).getText(), is("Socialismo democrático"));
+    driver.findElement(By.id("searchButton")).click();
+    By firstHeading = By.id("firstHeading");
+    WebDriverWait wait = new WebDriverWait(driver, 30);
+    wait.until(elementToBeClickable(firstHeading));
+    assertThat(driver.findElement(By.id("firstHeading")).getText(), is("Socialdemocracia"));
   }
 }

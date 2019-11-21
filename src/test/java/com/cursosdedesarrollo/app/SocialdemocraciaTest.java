@@ -19,7 +19,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
 import java.util.*;
-public class NavegacionTranquilaTest {
+public class SocialdemocraciaTest {
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
@@ -35,11 +35,15 @@ public class NavegacionTranquilaTest {
     driver.quit();
   }
   @Test
-  public void navegacionTranquila() {
-    driver.get("https://cursosdedesarrollo.com/");
-    driver.findElement(By.cssSelector(".g-menu-item-1208 .g-menu-item-title")).click();
-    driver.findElement(By.cssSelector(".g-menu-item-1209 .g-menu-item-title")).click();
-    driver.findElement(By.cssSelector(".size-70 > .g-content")).click();
-    assertThat(driver.findElement(By.cssSelector(".entry-title")).getText(), is("Carrito"));
+  public void socialdemocraciaTest() {
+    driver.get("https://es.wikipedia.org/wiki/Wikipedia:Portada");
+    driver.manage().window().setSize(new Dimension(1850, 1053));
+    driver.findElement(By.id("searchInput")).click();
+    driver.findElement(By.id("searchInput")).sendKeys("socialdemocracia");
+    driver.findElement(By.cssSelector(".suggestions-result-current > .highlight")).click();
+    driver.findElement(By.cssSelector(".tocsection-5 .toctext")).click();
+    driver.findElement(By.cssSelector("p:nth-child(42) > a")).click();
+    driver.findElement(By.id("firstHeading")).click();
+    assertThat(driver.findElement(By.id("firstHeading")).getText(), is("Socialismo democrático"));
   }
 }

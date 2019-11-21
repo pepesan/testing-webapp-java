@@ -45,10 +45,5 @@ public class StepWikipedias {
         wait.until(textToBePresentInElementLocated(By.tagName("body"),
                 textoABuscar));
     }
-    @AfterClass
-    public void finishClass(){
-        driver.close();
-        driver.quit();
-    }
 
 }

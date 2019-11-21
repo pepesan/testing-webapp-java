@@ -1,0 +1,73 @@
+{
+  "id": "1b87f8f7-034f-4a10-957b-2bfb0da9db94",
+  "version": "2.0",
+  "name": "cursosdedesarrollo",
+  "url": "https://cursosdedesarrollo.com/",
+  "tests": [{
+    "id": "304a7782-89d3-456a-8eac-82e074a889a4",
+    "name": "Navegacion Tranquila",
+    "commands": [{
+      "id": "fc489d92-ca56-4467-8e03-3e857e3e8e0b",
+      "comment": "",
+      "command": "open",
+      "target": "https://cursosdedesarrollo.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a8a211c-11d0-41b6-9091-2b85feb885ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g-menu-item-1208 .g-menu-item-title",
+      "targets": [
+        ["css=.g-menu-item-1208 .g-menu-item-title", "css:finder"],
+        ["xpath=//div[@id='menu-4858-particle']/nav/ul/li[2]/a/span/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f68fa946-e87a-46a5-b400-186e80b1ff0e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.g-menu-item-1209 .g-menu-item-title",
+      "targets": [
+        ["css=.g-menu-item-1209 .g-menu-item-title", "css:finder"],
+        ["xpath=//div[@id='menu-9726-particle']/nav/ul/li[3]/a/span/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8ceda53-3374-461e-a80d-ed258ea1d0b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.size-70 > .g-content",
+      "targets": [
+        ["css=.size-70 > .g-content", "css:finder"],
+        ["xpath=//main[@id='g-main']/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2844320a-ae37-4e7f-a22f-5445ce89151a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.entry-title",
+      "targets": [
+        ["css=.entry-title", "css:finder"],
+        ["xpath=//article[@id='post-1088']/section/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Carrito')]", "xpath:innerText"]
+      ],
+      "value": "Carrito"
+    }]
+  }],
+  "suites": [{
+    "id": "9518d8d1-7978-4b17-a42a-b9b9cc7c4c52",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["304a7782-89d3-456a-8eac-82e074a889a4"]
+  }],
+  "urls": ["https://cursosdedesarrollo.com/"],
+  "plugins": []
+}

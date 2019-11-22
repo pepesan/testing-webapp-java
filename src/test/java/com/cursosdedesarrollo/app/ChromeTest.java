@@ -29,11 +29,7 @@ public class ChromeTest {
             driver.quit();
         }
     }
-    @AfterClass
-    public void finishClass(){
-        driver.close();
-        driver.quit();
-    }
+
 
     @Test
     public void test() {

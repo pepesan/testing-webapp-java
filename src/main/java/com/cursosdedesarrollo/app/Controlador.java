@@ -6,7 +6,7 @@ import java.util.List;
  * Created by pepesan on 15/6/15.
  */
 public class Controlador {
-    public static Modelo model;
+    private Modelo model;
 
     Controlador(){
         model=new Modelo();

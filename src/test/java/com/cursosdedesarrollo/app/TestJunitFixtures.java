@@ -5,6 +5,8 @@ import org.junit.*;
 import java.io.Closeable;
 import java.io.IOException;
 
+import static org.testng.Assert.assertTrue;
+
 /**
  * Created by pepesan on 8/6/15.
  */
@@ -54,10 +56,12 @@ public class TestJunitFixtures {
     @Test
     public void test1() {
         this.println("@Test test1()");
+        assertTrue(true);
     }
 
     @Test
     public void test2() {
         this.println("@Test test2()");
+        assertTrue(true);
     }
 }

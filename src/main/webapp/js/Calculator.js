@@ -1,5 +1,4 @@
 var Calculator = (function(){
-    'strict mode';
 
     var store = '',
 

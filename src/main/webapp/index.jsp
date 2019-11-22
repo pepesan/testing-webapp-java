@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <title>Mi página de pruebas</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="js/index.js"></script>
 </head>

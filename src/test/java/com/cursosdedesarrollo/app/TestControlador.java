@@ -25,7 +25,7 @@ public class TestControlador {
     }
     @Test
     public void testModelNotNull(){
-        assertThat(controlador.model,notNullValue());
+        assertThat(controlador.getModel(),notNullValue());
     }
     @Test
     public void testListNotNull(){

@@ -41,7 +41,7 @@ public class TestControladorModelo {
         Modelo modeloespia = spy(modelo);
         when(modeloespia.list()).thenReturn(new ArrayList<String>());
         Controlador controladorEspia=spy(controlador);
-        controladorEspia.model=modeloespia;
+        controladorEspia.setModel(modeloespia);
         controladorEspia.list();
         /*
         List<String> listado=modeloespia.list();

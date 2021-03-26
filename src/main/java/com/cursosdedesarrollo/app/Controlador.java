@@ -20,6 +20,14 @@ public class Controlador {
         return listado;
     }
 
+    public Modelo getModel() {
+        return model;
+    }
+
+    public void setModel(Modelo model) {
+        this.model = model;
+    }
+
     public void imprime(String s) {
         System.out.println(s);
     }

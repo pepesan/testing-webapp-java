@@ -19,7 +19,8 @@ public class StepWikipedias {
 
     @Given("^Abro la web principal de la wikipedia$")
     public void entro_a_la_web_principal_de_wikipedia_ingles() throws Throwable {
-        WebDriverManager.phantomjs().setup();
+        // WebDriverManager.phantomjs().setup();
+        // WebDriverManager.chrome().setup();
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 30);
         driver.get("https://en.wikipedia.org/wiki/Main_Page");

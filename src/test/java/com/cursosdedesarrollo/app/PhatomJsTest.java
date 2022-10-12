@@ -32,7 +32,8 @@ public class PhatomJsTest {
 
     @Before
     public void setupTest() {
-        driver = new PhantomJSDriver();
+        driver = new ChromeDriver();
+        //driver = new PhantomJSDriver();
     }
 
     @After

@@ -1,11 +1,13 @@
 package com.cursosdedesarrollo.app;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
@@ -15,7 +17,7 @@ public class ChromeTest {
 
     @BeforeClass
     public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
+        // WebDriverManager.chromedriver().setup();
     }
 
     @Before
@@ -34,7 +36,7 @@ public class ChromeTest {
     @Test
     public void test() {
         // Your test code here. For example:
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         driver.get("https://en.wikipedia.org/wiki/Main_Page");
         By searchInput = By.id("searchInput");
         wait.until(presenceOfElementLocated(searchInput));

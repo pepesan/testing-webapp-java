@@ -8,13 +8,16 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.chrome.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
+import java.time.Duration;
+// import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * Test with PhantomJS.
@@ -28,7 +31,7 @@ public class PhatomJsTest {
 
     @BeforeClass
     public static void setupClass() {
-        WebDriverManager.phantomjs().setup();
+        //WebDriverManager.phantomjs().setup();
     }
 
     @Before
@@ -45,9 +48,10 @@ public class PhatomJsTest {
     }
 
     @Test
+    @Disabled
     public void test() {
         // Your test code here. For example:
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         driver.get("https://en.wikipedia.org/wiki/Main_Page");
         By searchInput = By.id("searchInput");
         wait.until(presenceOfElementLocated(searchInput));

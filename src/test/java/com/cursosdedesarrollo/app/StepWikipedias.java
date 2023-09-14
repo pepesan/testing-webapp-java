@@ -4,12 +4,14 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
@@ -22,7 +24,7 @@ public class StepWikipedias {
         // WebDriverManager.phantomjs().setup();
         // WebDriverManager.chrome().setup();
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, 30);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         driver.get("https://en.wikipedia.org/wiki/Main_Page");
 
     }

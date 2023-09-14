@@ -54,14 +54,8 @@
       <version>${logback.version}</version>
     </dependency>
     <dependency>
-      <groupId>io.github.bonigarcia</groupId>
-      <artifactId>webdrivermanager</artifactId>
-      <version>3.7.1</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-api</artifactId>
+      <artifactId>selenium-java</artifactId>
       <version>${selenium.version}</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
